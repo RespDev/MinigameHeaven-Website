@@ -1,2 +1,4 @@
 # Landing-Page
 The landing page for MinigameHeaven
+
+DO NOT USE WITHOUT PERMISSION FROM MINIGAME HEAVEN DEVELOPERS
