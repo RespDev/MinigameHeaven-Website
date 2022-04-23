@@ -1,4 +1,3 @@
-# Landing-Page
-Minigame Heaven Landing Page
-
-DO NOT USE WITHOUT PERMISSION FROM MINIGAME HEAVEN DEVELOPERS
+# Minigame Heaven Website
+The official website for Minigame Heaven.
+Want more info? https://www.minigameheaven.net
