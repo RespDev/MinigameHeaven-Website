@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Coming Soon</title>
+  <title>Minecraft Server</title>
   <style>
     body {
       background-color: #eee;
       font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
+    }
+    .header {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      padding: 10px 20px;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-left: 20px;
+    }
+    .nav a.active {
+      color: #4CAF50;
     }
     .content {
       max-width: 800px;
@@ -16,70 +48,55 @@
       text-align: left;
       color: #333;
     }
-    h1 {
-      font-size: 2em;
+    h2 {
+      font-size: 1.5em;
       margin-bottom: 20px;
     }
-    p {
+    .server-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .server-status p {
       font-size: 1.2em;
-      line-height: 1.5;
-      margin-bottom: 30px;
     }
-    input[type="email"] {
-      width: 300px;
-      height: 40px;
-      font-size: 1em;
-      padding: 0 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      width: 300px;
-      height: 40px;
-      font-size: 1em;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-    .countdown {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .countdown span {
+    .server-status .status {
+      font-size: 1.5em;
       color: #4CAF50;
     }
-  </style>
-</head>
-<body>
-  <div class="content">
-    <h1>Our website is coming soon!</h1>
-    <p>Thanks for stopping by. We are currently working on building the best website possible for our customers. In the meantime, please leave your email address below to stay updated on our progress and be notified when we launch.</p>
-    <div class="countdown">
-      Launch in: <span id="days">00</span> days <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-    </div>
-    <form>
-      <input type="email" placeholder="Enter your email address">
-      <br>
-      <input type="submit" value="Sign Up">
-    </form>
-  </div>
-  <script>
-    // Set the launch date (in seconds)
-    const launchDate = 1638476800;
-
-    // Update the countdown every 1 second
-    setInterval(function() {
-      // Get the current date and time (in seconds)
-      const currentDate = Math.floor(Date.now() / 1000);
-
-      // Calculate the time remaining until launch (in seconds)
-      let timeRemaining = launchDate - currentDate;
-
-      // Convert the time remaining to days, hours, minutes, and seconds
-      const days = Math.floor(timeRemaining / 86400);
-      timeRemaining = timeRemaining % 8
+    .server-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .server-info p {
+      font-size: 1.2em;
+    }
+    .server-info .info {
+      font-size: 1.5em;
+    }
+    .server-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .server-stats .stat {
+      width: calc(33% - 10px);
+      margin-bottom: 20px;
+    }
+    .server-stats .stat p {
+      font-size: 1.2em;
+    }
+    .server-stats .stat .value {
+      font-size: 1.5em;
+    }
+    .server-rules {
+      margin-bottom: 20px;
+    }
+    .server-rules h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
