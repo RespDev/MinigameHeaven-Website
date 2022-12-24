@@ -46,17 +46,40 @@
     input[type="submit"]:hover {
       background-color: #45a049;
     }
+    .countdown {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .countdown span {
+      color: #4CAF50;
+    }
   </style>
 </head>
 <body>
   <div class="content">
     <h1>Our website is coming soon!</h1>
     <p>Thanks for stopping by. We are currently working on building the best website possible for our customers. In the meantime, please leave your email address below to stay updated on our progress and be notified when we launch.</p>
+    <div class="countdown">
+      Launch in: <span id="days">00</span> days <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
     <form>
       <input type="email" placeholder="Enter your email address">
       <br>
       <input type="submit" value="Sign Up">
     </form>
   </div>
-</body>
-</html>
+  <script>
+    // Set the launch date (in seconds)
+    const launchDate = 1638476800;
+
+    // Update the countdown every 1 second
+    setInterval(function() {
+      // Get the current date and time (in seconds)
+      const currentDate = Math.floor(Date.now() / 1000);
+
+      // Calculate the time remaining until launch (in seconds)
+      let timeRemaining = launchDate - currentDate;
+
+      // Convert the time remaining to days, hours, minutes, and seconds
+      const days = Math.floor(timeRemaining / 86400);
+      timeRemaining = timeRemaining % 8
